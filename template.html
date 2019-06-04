@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <?!= include('_stylesheets'); ?>
+  </head>
+  <body>
+    <div class="container">
+      <!-- BEGIN logo section -->
+      <div class="section">
+        <div class="row">
+          <div class="col s5 b-r">
+            <img src="https://storage.googleapis.com/shoosh-monkey.appspot.com/sm-head-title-vstacked-blue-256.png" width="80px" />
+          </div>
+          <div class="col s7">
+            <br/>
+            <h6 class="header blue-text">Update Schedule</h6>
+          </div>
+        </div>
+      </div>
+      <!-- END logo section -->
+      
+      <!-- body section-->
+      <p class="light">
+        Please change the delivery date of the row you have selected below and click the update button.
+      </p>
+      </div>
+       
+       <div class="container">
+       <form>
+        <div class="row">
+          <div class="input-field col s12">
+             <input name="deliveryDate" type="date">
+             <label for="deliveryDate">Date</label>
+          </div>
+        </div>
+        
+        <!--button section-->
+        <div class="container">
+        <div class="row">
+          <div class="col s6">
+            <button id="btnSubmit" class="btn waves-effect waves-light" type="submit">Action</button>
+          </div>
+          <div class="col s6">
+            <a class="waves-effect waves-teal btn-flat" onclick="return closeWindow();">Cancel</a>
+          </div>
+        </div> 
+           </div>
+     </form>  
+  </div>
+
+
+    <?!= include('_scripts'); ?>
+    <script type="text/javascript">
+    
+    
+    </script>  
+</body>
+</html>
+

@@ -1,12 +1,22 @@
 function onOpen()
 {
-  var ui = SpreadsheetApp.getUi();
-  ui.createMenu("Custom Menu")
+  var menu = SpreadsheetApp.getUi();
+  menu.createMenu("Shoosh Monkey")
     .addItem("☎ Help & Support","openHelpSite")
     .addSeparator()
-    .addItem("", "")
+    .addItem("Show Sidebar", "showSidebar")
     .addToUi();
 } // onOpen()
+
+//show sidebar
+function showSidebar() {
+  loadingToast();
+  var html = HtmlService.createTemplateFromFile('template').evaluate()
+      .setTitle('template')
+      .setWidth(300);
+  SpreadsheetApp.getUi() // Or DocumentApp or FormApp.
+      .showSidebar(html);
+}
 
 //Open a website URL - use with openUrl()
 function openHelpSite(){
