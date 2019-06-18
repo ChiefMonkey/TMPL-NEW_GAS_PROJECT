@@ -43,3 +43,17 @@ function openUrl( url ){
   .setWidth( 410 ).setHeight( 1 );
   SpreadsheetApp.getUi().showModalDialog( html, "Opening..." );
 }//openUrl()
+
+//load the CSS file
+function include(_stylesheet) {
+  return HtmlService.createHtmlOutputFromFile(_stylesheet)
+      .setSandboxMode(HtmlService.SandboxMode.IFRAME)
+      .getContent();
+}//load the CSS file
+
+//load the script file
+function include(_script) {
+  return HtmlService.createHtmlOutputFromFile(_script)
+      .setSandboxMode(HtmlService.SandboxMode.IFRAME)
+      .getContent();
+}//load the script file
